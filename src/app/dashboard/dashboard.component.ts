@@ -14,9 +14,9 @@ export class DashboardComponent implements OnInit {
 
   private dashboardUrl = 'http://localhost:8080/';  // URL to web api
 
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
+  // httpOptions = {
+  //   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  // };
 
   bookings: Booking[] = [];
 

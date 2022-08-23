@@ -23,7 +23,16 @@ export class ReservationService {
     private messageService: MessageService) { }
 
   /** GET reservations from the server */
-  getReservations(): Observable<any> {
+
+  // getReservations(body: string): Observable<any> {
+  //   let headers = new HttpHeaders({'Content-Type': 'application/json'});
+  //   let options = {headers: headers};
+  //
+  //   return this.http.post<any>(this.reservationsUrl, body, options);
+  // }
+
+
+    getReservations(): Observable<any> {
     return this.http.get<any>(this.reservationsUrl);
   }
 

@@ -3,7 +3,7 @@ import {Booking} from "../model/booking";
 import {BookingService} from "../service/booking.service";
 import {Location} from "@angular/common";
 
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {MessageService} from "../service/message.service";
 import {ActivatedRoute} from "@angular/router";
 import {ErrorModalComponent} from "../error-modal/error-modal.component";
