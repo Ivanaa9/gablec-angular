@@ -1,0 +1,106 @@
+<!--&lt;!&ndash;<table>&ndash;&gt;-->
+<!--&lt;!&ndash;<div *ngFor="let booking in bookings">&ndash;&gt;-->
+<!--&lt;!&ndash;  {{booking.name}}&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</table>&ndash;&gt;-->
+
+<!--&lt;!&ndash; todo: refactorati 'powers' u 'number_of_guests', pow-> num ; power -> number , refactorati hero u reservation&ndash;&gt;-->
+<!--&lt;!&ndash;TODO: navbar -> <nav> element &ndash;&gt;-->
+<!--&lt;!&ndash;{{ model | json }}&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;Respond to form submission&ndash;&gt;-->
+
+<!--<div [hidden]="submitted">-->
+<!--  <h1>Reservation</h1>-->
+<!--  <form (ngSubmit)="onSubmit()" #reservationForm="ngForm">-->
+
+<!--    &lt;!&ndash; ... all of the form ... &ndash;&gt;-->
+
+<!--  </form>-->
+<!--</div>-->
+
+<!--<div [hidden]="!submitted">-->
+<!--  <h2>You submitted the following:</h2>-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-3">Na me</div>-->
+<!--    <div class="col-xs-9">{{ model.name }}</div>-->
+<!--  </div>-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-3">Mobile</div>-->
+<!--    <div class="col-xs-9">{{ model.mobile }}</div>-->
+<!--  </div>-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-3">E-mail</div>-->
+<!--    <div class="col-xs-9">{{ model.email }}</div>-->
+<!--  </div>-->
+<!--  <div class="row">-->
+<!--    <div class="col-xs-3">Number of guests</div>-->
+<!--    <div class="col-xs-9">{{ model.guests }}</div>-->
+<!--  </div>-->
+<!--  <br>-->
+<!--  <button type="button" class="btn btn-primary" (click)="submitted=false">Edit</button>-->
+<!--</div>-->
+
+<!--<form #reservationForm="ngForm">-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="name">Name</label>-->
+<!--    <input type="text" class="form-control" id="name"-->
+<!--           required-->
+<!--           [(ngModel)]="model.name" name="name"-->
+<!--           #name="ngModel">-->
+<!--    &lt;!&ndash;Show and hide validation error messages &ndash;&gt;-->
+<!--    <div [hidden]="name.valid || name.pristine"-->
+<!--         class="alert alert-danger">Name is required</div>-->
+<!--    &lt;!&ndash;Show and hide validation error messages &ndash;&gt;-->
+<!--  </div>-->
+
+
+
+<!--  &lt;!&ndash; Notice that each <input> element has an id property.-->
+<!--  This is used by the <label> element's for attribute to match the label to its input control.-->
+<!--  Each <input> element also has the required name property that Angular uses to register the control with the form.-->
+
+<!--  for="name"  i  id="name" se podudaraju pa Angular onda zna spojit da se unosi i forme podudaraju&ndash;&gt;-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="mobile">Mobile</label>-->
+<!--    <input type="text"  class="form-control" id="mobile" required-->
+<!--           [(ngModel)]="model.mobile" name="mobile"-->
+<!--           #mobile="ngModel">-->
+<!--    <div [hidden]="mobile.valid || mobile.pristine"-->
+<!--         class = "alert alert-danger"> Mobile is required </div>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="number">Number of guests</label>-->
+<!--    <select class="form-control"  id="number"-->
+<!--            required-->
+<!--            [(ngModel)]="model.guests" name="number">-->
+<!--      <option *ngFor="let num of number_of_guests" [value]="num">{{num}}</option>-->
+<!--    </select>-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="email">Email</label>-->
+<!--    <input type="text"  class="form-control" id="email"-->
+<!--           [(ngModel)]="model.email" name="email">-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash;New Booking button &ndash;&gt;-->
+<!--  <button type="button" class="btn btn-default" (click)="newBooking(); reservationForm.reset()">-->
+<!--    New Reservation / Reset-->
+<!--  </button>-->
+<!--</form>-->
+
+<!--&lt;!&ndash;  Submit the form with ngSubmit&ndash;&gt;-->
+<!--&lt;!&ndash;ngSubmit&ndash;&gt;-->
+<!--<form (ngSubmit)="onSubmit()" #reservationForm="ngForm">-->
+<!--  &lt;!&ndash;submit-button&ndash;&gt;-->
+<!--  <button type="submit" class="btn btn-success" [disabled]="!reservationForm.form.valid">Submit</button>-->
+
+<!--</form>-->
+
+
+

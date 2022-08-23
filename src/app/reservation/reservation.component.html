@@ -1,0 +1,30 @@
+<div *ngIf="reservations">
+  <table class="table">
+
+    <thead>
+    <tr>
+      <th></th>
+      <th>name</th>
+      <th>email</th>
+      <th>mobile</th>
+      <th>Date and time</th>
+      <th>guests</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let reservation of reservations">
+      <td></td>
+      <td>{{reservation.name}}</td>
+      <td>{{reservation.email}}</td>
+      <td>{{reservation.mobile}}</td>
+      <td>{{reservation.dateTime | date:'dd/MM/yyyy\' \'HH:mm'}}</td>
+      <!--      <td>{{reservation.dateTime | date:'dd/MM/yyyy\' \'HH\:\00'}}</td>-->
+      <td>{{reservation.guests}}</td>
+      <!--      todo: srediti da se epoha lijepo ispiše u frontendu-->
+
+    </tr>
+    </tbody>
+  </table>
+</div>
+
