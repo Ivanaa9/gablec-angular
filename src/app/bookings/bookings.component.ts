@@ -52,26 +52,27 @@ export class BookingsComponent implements OnInit {
       });
   }
 
+
+  goBack(): void {
+    this.location.back();
+  }
   submitted = false;
 
   onSubmit() {
     console.log("stisnuo sam on submit")
     this.submitted = true;
 
-  }
 
-
-  goBack(): void {
-    this.location.back();
   }
 
   save(): void {
+    this.submitted = true;
+
     if (this.booking) {
       console.log('bookings komponenta')
       console.log(this.booking)
       this.bookingService.updateBooking(this.booking)
         .subscribe(() => this.goBack())
-
 
       this.openModal2("Zabilježili smo tvoju rezervaciju.");
     }
